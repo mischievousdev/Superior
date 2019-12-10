@@ -40,4 +40,4 @@ For Issue please use Issue Tracker.<br>
 For bugs you can report [here](https://discord.gg/qBx2uKZ).
 
 # License
-All the files(including `logo.png`) are licensed under **[MIT](https://github.com/devhubyt/Superior/blob/master/LICENSE)*
+All the files(including `logo.png`) are licensed under **[MIT](https://github.com/devhubyt/Superior/blob/master/LICENSE)**
