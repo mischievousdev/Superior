@@ -80,6 +80,7 @@ async def help(ctx):
 	embed.add_field(name="Fun Commands", value="*meme | slap | echo | mentionme | dice | toss | reverse | meow | hug*", inline=True)
 	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
+	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
 	await ctx.send(embed=embed)
 	
 @client.command()
