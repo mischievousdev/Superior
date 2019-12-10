@@ -6,3 +6,16 @@
 <a href="https://discord.gg/qBx2uKZ"><img src="https://img.shields.io/badge/join-server-informational?style=flat&logo=Discord"></a>
 <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 <div>
+  
+# What is this?
+**Superior Bot** is the free& open source bot for every servers. It has commands like welcomer, moderation, mathematics, embed generator, image fun, fun commands & also shows the errors. It is free & always be free, if you want any help join the [Discord Server](https://discord.gg/qBx2uKZ). If you want to support (or) encourage us for further projects visit our **[Patreon Page](https://patreon.com/devhbuyt)** & and also subscribe to our **[YouTube Channel](https://www.youtube.com/channel/UCWRmGuKte213IRAg62_ycPw)**.
+
+# Can i contribute?
+No doubt, An extra hand to support is very helpfull for us to develop this project. **Pr's Welcome**
+
+For Issue please use Issue Tracker.
+
+For bugs you can report [here](https://discord.gg/qBx2uKZ).
+
+# License
+All the files(including `logo.png`) are licensed under **[MIT](https://github.com/devhubyt/Superior/blob/master/LICENSE)**
