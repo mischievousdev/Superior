@@ -1,0 +1,11 @@
+{
+  "name": "Superior Bot",
+  "description": "Easy to handle, fun to use discord bot",
+  "repository": "https://github.com/devhubyt/Superior",
+  "env": {
+    "TOKEN": {
+      "description": "Your discord bot token",
+      "required": true
+    }
+  }
+}
