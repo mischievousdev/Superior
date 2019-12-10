@@ -40,25 +40,22 @@ class Embed(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    def check(self, ctx, c):
-        return c.channel == ctx.message.channel and c.author == ctx.message.author
-
     @commands.command()
     async def embed(self, ctx):
         await ctx.send("What is the title of the Embed?")
-        msg = await self.client.wait_for("message", check=check)
+        msg = await self.client.wait_for("message")
         title = msg.content
 
         await ctx.send("What would be the description of the embed?")
-        msg = await self.client.wait_for("message", check=check)
+        msg = await self.client.wait_for("message")
         description = msg.content
 
         await ctx.send("What would be the author of the embed?")
-        msg = await self.client.wait_for("message", check=check)
+        msg = await self.client.wait_for("message")
         author = msg.content
 
         await ctx.send("What would the thumbnail of the Embed?")
-        msg = await self.client.wait_for("message", check=check)
+        msg = await self.client.wait_for("message")
         turl = msg.content
 
         msg = await ctx.send("Generating the embed...")
