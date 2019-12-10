@@ -59,7 +59,7 @@ class Embed(commands.Cog):
         desc = msg.content
         
         await ctx.send(content='What would be the thumbnail(note: url must be valid)')
-        msg = await self.client.wait_for('message', check-check)
+        msg = await self.client.wait_for('message', check=check)
         thumbnailurl = msg.content
 
         msg = await ctx.send(content='Now generating the embed...')
