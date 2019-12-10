@@ -3,7 +3,7 @@
   "description": "Easy to handle, fun to use discord bot",
   "repository": "https://github.com/devhubyt/Superior",
   "env": {
-    "TOKEN": {
+    "token": {
       "description": "Your discord bot token",
       "required": true
     }
