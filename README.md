@@ -12,9 +12,7 @@
 
 # Can i contribute?
 No doubt, An extra hand to support is very helpfull for us to develop this project. **Pr's Welcome**
-
 For Issue please use Issue Tracker.
-
 For bugs you can report [here](https://discord.gg/qBx2uKZ).
 
 # License
