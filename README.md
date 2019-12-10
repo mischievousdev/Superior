@@ -8,7 +8,7 @@
 </div>
 
 # What is this?
-**Superior Bot** is the free& open source bot for every servers. It has commands like welcomer, moderation, mathematics, embed generator, image fun, fun commands & also shows the errors. It is free & always be free, if you want any help join the [Discord Server](https://discord.gg/qBx2uKZ). If you want to support (or) encourage us for further projects visit our **[Patreon Page](https://patreon.com/devhbuyt)** & and also subscribe to our **[YouTube Channel](https://www.youtube.com/channel/UCWRmGuKte213IRAg62_ycPw)**.
+**Superior Bot** is the free& open source bot for every servers. It has commands like welcomer, moderation, mathematics, embed generator, image fun, fun commands & also shows the errors. It is free & always be free, if you want any help join the **[Discord Server](https://discord.gg/qBx2uKZ)**. If you want to support (or) encourage us for further projects visit our **[Patreon Page](https://patreon.com/devhbuyt)** & and also subscribe to our **[YouTube Channel](https://www.youtube.com/channel/UCWRmGuKte213IRAg62_ycPw)**.
 
 # How do i host?
 Hosting tutorial can be seen here [Installation Guide](https://github.com/devhubyt/Superior/wiki/Installation-Tutorial)
