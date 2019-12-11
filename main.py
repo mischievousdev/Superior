@@ -77,7 +77,7 @@ async def help(ctx):
 	embed = discord.Embed(color=discord.Color.dark_teal(), timestap=datetime.datetime.utcnow())
 	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
-	embed.add_field(name="Fun Commands", value="*meme | slap | echo | mentionme | dice | toss | reverse | meow | hug*", inline=True)
+	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
 	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
