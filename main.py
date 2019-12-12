@@ -27,7 +27,7 @@ client = commands.Bot(
            case_insensitive=True
 )
 client.remove_command('help')
-token = os.getenv("token")
+token = os.getenv("TOKEN")
 	
 @client.command(name="load", discription="Loads a cog", hidden=True)
 async def load(ctx, extension):
