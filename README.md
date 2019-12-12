@@ -34,6 +34,9 @@ python main.py
 
 Your bot is now online!
 
+# Deploy using docker?
+docker run -e TOKEN="your token" superior-bot
+
 # Can i contribute?
 No doubt, An extra hand to support is very helpfull for us to develop this project. **Pr's Welcome**.<br>
 For Issue please use Issue Tracker.<br>
