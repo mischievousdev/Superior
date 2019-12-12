@@ -1,0 +1,6 @@
+name: 'superior bot docker'
+description: 'Superior bot Docker'
+author: 'asapcatftw'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
