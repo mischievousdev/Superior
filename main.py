@@ -259,9 +259,9 @@ async def hug(ctx, *, member: discord.Member = None):
 	if member is None:
 		await ctx.send(f"{ctx.message.author.mention} has been hugged 💝")
 	elif member.id == ctx.message.author.id:
-		await ctx.send(ctx.message.author.mention + "hugged themselves because they are singles 👬")
+		await ctx.send(f"{ctx.message.author.mention} hugged themselves because they are singles 👬")
 	else:
-		await ctx.send({member.mention} + "was hugged by" + ctx.message.author.mention + "💝")
+		await ctx.send(f"{member.mention} was hugged by {ctx.message.author.mention} 💝")
 		
 @client.command()
 async def google(ctx, *, search = None):
