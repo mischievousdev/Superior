@@ -44,5 +44,11 @@ No doubt, An extra hand to support is very helpfull for us to develop this proje
 For Issue please use Issue Tracker.<br>
 For bugs you can report [here](https://discord.gg/qBx2uKZ).
 
+## Contributors
+
+* [devhubyt](https://github.com/devhubyt)
+
+* [asapcatftw](https://github.com/asapcatftw)
+
 # License
 All the files(including `logo.png`) are licensed under **[MIT](https://github.com/devhubyt/Superior/blob/master/LICENSE)**
