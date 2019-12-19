@@ -239,11 +239,6 @@ async def meme(ctx):
 			embed = discord.Embed(title="Here Come's meme", color=discord.Color.dark_green())
 			embed.set_image(url=url)
 			await ctx.send(embed=embed)
-			
-@client.command()
-async def reverse(ctx, *, text: str):
-	text = "".join(reversed(text)
-	await ctx.send(text)
 	
 @client.command()
 async def slap(ctx, *, member: discord.Member = None):
