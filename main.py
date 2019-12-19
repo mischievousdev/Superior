@@ -243,7 +243,7 @@ async def meme(ctx):
 @client.command()
 async def reverse(ctx, *, message):
 	message = message.split()
-	await ctx.send("".join(reversed(str(message))
+	await ctx.send("".join(reversed(str(message)))
 	
 @client.command()
 async def slap(ctx, *, member: discord.Member = None):
