@@ -141,6 +141,17 @@ async def userinfo(ctx, member: discord.Member):
 	await ctx.send(embed=em)
 	
 @client.command()
+async def myinfo(ctx):
+	roles = [role for role in ctx.author.roles]
+	embed = discord.Embed(title=f"About {ctx.author}", color=discord.Color.dark_magenta())
+	embed.add_field(name="ID", value=f"{ctx.author.id}", inline=True)
+	embed.add_field(name="Joined at", value=ctx.author.joined_at.strftime("%a, %#d %B %Y, %I:%M %p UTC"))
+	embed.add_field(name="Roles", value=" ".join([role.mention for role in roles]))
+	embed.add_field(name="Top Role", value=ctx.author.top_role.mention)
+	embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
+	await ctx.send(embed=embed)
+	
+@client.command()
 async def guildinfo(ctx):
 	roles = [role for role in ctx.guild.roles]
 	guild_age = (ctx.message.created_at - ctx.author.guild.created_at).days
