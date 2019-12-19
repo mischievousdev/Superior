@@ -81,6 +81,7 @@ async def help(ctx):
 	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
+	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")
 	await ctx.send(embed=embed)
 	
 @client.command()
@@ -102,7 +103,7 @@ async def connect(ctx):
 @client.command()
 @commands.is_owner()
 async def stats(ctx):
-	await ctx.send(len(client.commands) + len(client.guilds) + len(client.users))
+	await ctx.send(f"Current commands: {len(client.commands)}, Guilds: {len(client.guilds)} and Used by {len(client.users)}")
 	
 @client.command()
 async def ping(ctx):
