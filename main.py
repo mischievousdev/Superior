@@ -177,7 +177,10 @@ async def meow(ctx):
 		async with session.get('http://aws.random.cat/meow') as r:
 			if r.status == 200:
 				js = await r.json()
-				await ctx.send(js['file'])
+				url = js['file']
+				embed = discord.Embed(title="Here Come's", color=discord.Color.dark_green())
+				embed.set_image(url=url)
+				await ctx.send(embed=embed)
 			
 @client.command()
 async def botinfo(ctx):
@@ -232,12 +235,15 @@ async def meme(ctx):
 	async with aiohttp.ClientSession() as session:
 		async with session.get("https://api.reddit.com/r/me_irl/random") as r:
 			data = await r.json()
-			await ctx.send(data[0]["data"]["children"][0]["data"]["url"])
+			url = data[0]["data"]["children"][0]["data"]["url"]
+			embed = discord.Embed(title="Here Come's meme", color=discord.Color.dark_green())
+			embed.set_image(url=url)
+			await ctx.send(embed=embed)
 			
 @client.command()
 async def reverse(ctx, *, message):
 	message = message.split()
-	await ctx.send(' '.join(reversed(message)))
+	await ctx.send("".join(reversed(str(message))
 	
 @client.command()
 async def slap(ctx, *, member: discord.Member = None):
