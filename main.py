@@ -49,7 +49,7 @@ async def on_ready():
 	game = discord.Game("Launchin zzz..")
 	await client.change_presence(status=discord.Status.idle, activity=game)
 	print("Launched sucessfully" + client.user.display_name)
-	game1 = discord.Game(f"@mention help | Listening to {len(client.users)}")
+	game1 = discord.Game(f"@mention help | Listening to {len(client.users)} peoples")
 	await client.change_presence(status=discord.Status.online, activity=game1)
 		
 @client.event
