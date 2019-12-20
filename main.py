@@ -75,7 +75,7 @@ async def welcomer_help(ctx):
 @client.command()
 async def help(ctx):
 	embed = discord.Embed(color=discord.Color.dark_teal(), timestap=datetime.datetime.utcnow())
-	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
+	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | myinfo | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
 	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
 	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
