@@ -1,0 +1,32 @@
+body {
+    font-family: Montserrat;
+    color: white;
+}
+
+.head {
+    height: 100vh;
+    position: relative;
+    font-family: Montserrat;
+    color: white;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.img {
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.white {
+    color: white;
+    font-family: Montserrat;
+}
