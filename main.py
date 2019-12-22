@@ -82,6 +82,7 @@ async def help(ctx):
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
 	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")
+	embed.set_footer(text=f"Hey! {ctx.message.author} to view list of commands with defination visit https://http://www.devhubyt.xyz/Superior/commands.html")               
 	await ctx.send(embed=embed)
 	
 @client.command()
