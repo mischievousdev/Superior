@@ -213,7 +213,7 @@ class Moderation(commands.Cog):
             await ctx.send("❕You dont have permission to do softban")
 
     @commands.command()
-    @commands.has_permissions(manage_server=True)
+    @commands.has_permissions()
     @checks.is_mod()
     async def nuke(self, ctx):
         channel_position = ctx.channel.position
