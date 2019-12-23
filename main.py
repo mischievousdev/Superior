@@ -1,4 +1,4 @@
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 import discord
 from discord import utils, Client
@@ -49,7 +49,7 @@ async def on_ready():
 	game = discord.Game("Launchin zzz..")
 	await client.change_presence(status=discord.Status.idle, activity=game)
 	print("Launched sucessfully" + client.user.display_name)
-	game1 = discord.Game(f"@mention help | Listening to {len(client.users)} peoples")
+	game1 = discord.Game("@mention help")
 	await client.change_presence(status=discord.Status.online, activity=game1)
 		
 @client.event
@@ -205,7 +205,7 @@ async def botinfo(ctx):
 	embed.add_field(name="Commands Injected", value=len(client.commands))
 	embed.add_field(name="Platform", value=platform)
 	embed.add_field(name="Guilds", value=guilds)
-	embed.add_field(name="Used by", value=len(client.users))
+	embed.add_field(name="Used by", value=f"{len(client.users)} users")
 	await ctx.send(embed=embed)
 
 
