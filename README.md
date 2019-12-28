@@ -5,6 +5,7 @@
 <a href="https://patreon.com/devhubyt"><img src="https://img.shields.io/badge/donate-patreon-orange?style=flat&logo=Patreon"></a>
 <a href="https://discord.gg/qBx2uKZ"><img src="https://img.shields.io/badge/join-server-informational?style=flat&logo=Discord"></a>
 <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href="https://codeclimate.com/github/devhubyt/Superior/maintainability"><img src="https://api.codeclimate.com/v1/badges/dc875794d8f775386528/maintainability" /></a>
 <a href="https://top.gg/bot/653232051729989633"><img src="https://top.gg/api/widget/status/653232051729989633.svg" alt="dbl"></a>
 </div>
 
