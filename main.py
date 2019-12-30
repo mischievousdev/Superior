@@ -1,4 +1,4 @@
-__version__ = "1.0.1"
+__version__ = "1.0.3"
 
 import discord
 from discord import utils, Client
@@ -49,7 +49,7 @@ async def on_ready():
 	game = discord.Game("Launchin zzz..")
 	await client.change_presence(status=discord.Status.idle, activity=game)
 	print("Launched sucessfully" + client.user.display_name)
-	game1 = discord.Game(f"@mention help | Listening to {len(client.users)}")
+	game1 = discord.Game("@mention help")
 	await client.change_presence(status=discord.Status.online, activity=game1)
 		
 @client.event
@@ -59,29 +59,23 @@ async def on_command_error(ctx, error):
 	
 @client.event
 async def on_guild_join(guild):
-	general = find(lambda x: x.name == 'general', guild.text_channels)
-	if general and general.permissions_for(guild.me).send_messages:
-		embed = discord.Embed(title=f"Thanks for Adding me on {guild}", description="To know list of commands, Please type @mention help", color=discord.Color.greyple(), timestap=datetime.datetime.utcnow())
-		embed.add_field(name="Total servers", value=len(client.guilds))
-		await general.send(embed=embed)
-	
-@client.command()
-async def welcomer_help(ctx):
-	embed = discord.Embed(color=discord.Color.dark_teal())
-	embed.add_field(name="Available Setup Commands", value="`welcomer set_channel` | `welcomer set_text`")
-	embed.add_field(name="Available Format for Text", value="`mention` - Mentions the member | `user` - Shows the member name | `guild` - Shows the guild name")
-	await ctx.send(embed=embed)
+    print(f"{guild} is now using me")
 	
 @client.command()
 async def help(ctx):
-	embed = discord.Embed(color=discord.Color.dark_teal(), timestap=datetime.datetime.utcnow())
-	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
+	embed = discord.Embed(color=discord.Color.dark_teal(), timestap=datetime.datetime.utcnow(), description=f"Hey! {ctx.message.author} to view list of commands with defination visit the [website](http://www.devhubyt.xyz/Superior/commands.html)")
+	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | myinfo | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
 	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
 	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
+	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")               
 	await ctx.send(embed=embed)
+	
+@client.command()
+async def invite(ctx):
+    await ctx.send(f"https://discordapp.com/api/oauth2/authorize?client_id={client.user.id}&permissions=8&scope=bot")
 	
 @client.command()
 @commands.is_owner()
@@ -102,7 +96,7 @@ async def connect(ctx):
 @client.command()
 @commands.is_owner()
 async def stats(ctx):
-	await ctx.send(len(client.commands) + len(client.guilds) + len(client.users))
+	await ctx.send(f"Current commands: {len(client.commands)}, Guilds: {len(client.guilds)} and Used by {len(client.users)}")
 	
 @client.command()
 async def ping(ctx):
@@ -203,7 +197,7 @@ async def botinfo(ctx):
 	embed.add_field(name="Commands Injected", value=len(client.commands))
 	embed.add_field(name="Platform", value=platform)
 	embed.add_field(name="Guilds", value=guilds)
-	embed.add_field(name="Used by", value=len(client.users))
+	embed.add_field(name="Used by", value=f"{len(client.users)} users")
 	await ctx.send(embed=embed)
 
 
@@ -250,11 +244,6 @@ async def meme(ctx):
 			embed = discord.Embed(title="Here Come's meme", color=discord.Color.dark_green())
 			embed.set_image(url=url)
 			await ctx.send(embed=embed)
-			
-@client.command()
-async def reverse(ctx, *, message):
-	message = message.split()
-	await ctx.send("".join(reversed(str(message))
 	
 @client.command()
 async def slap(ctx, *, member: discord.Member = None):
