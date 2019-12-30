@@ -193,7 +193,7 @@ async def botinfo(ctx):
 	guilds = len(client.guilds)
 	embed = discord.Embed(color=discord.Color.dark_green(), description="If you like the bot, consider support us on [Patreon](https://patreon.com/devhubyt)")
 	embed.set_thumbnail(url=client.user.avatar_url)
-	embed.add_field(name="Library", value="discord.py")
+	embed.add_field(name="Library", value=f"discord.py-{discord.__version__}")
 	embed.add_field(name="Commands Injected", value=len(client.commands))
 	embed.add_field(name="Platform", value=platform)
 	embed.add_field(name="Guilds", value=guilds)
