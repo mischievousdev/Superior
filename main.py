@@ -1,4 +1,4 @@
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 import discord
 from discord import utils, Client
@@ -59,31 +59,23 @@ async def on_command_error(ctx, error):
 	
 @client.event
 async def on_guild_join(guild):
-	general = find(lambda x: x.name == 'general', guild.text_channels)
-	if general and general.permissions_for(guild.me).send_messages:
-		embed = discord.Embed(title=f"Thanks for Adding me on {guild}", description="To know list of commands, Please type @mention help", color=discord.Color.greyple(), timestap=datetime.datetime.utcnow())
-		embed.add_field(name="Total servers", value=len(client.guilds))
-		await general.send(embed=embed)
-	
-@client.command()
-async def welcomer_help(ctx):
-	embed = discord.Embed(color=discord.Color.dark_teal())
-	embed.add_field(name="Available Setup Commands", value="`welcomer set_channel` | `welcomer set_text`")
-	embed.add_field(name="Available Format for Text", value="`mention` - Mentions the member | `user` - Shows the member name | `guild` - Shows the guild name")
-	await ctx.send(embed=embed)
+    print(f"{guild} is now using me")
 	
 @client.command()
 async def help(ctx):
-	embed = discord.Embed(color=discord.Color.dark_teal(), timestap=datetime.datetime.utcnow())
+	embed = discord.Embed(color=discord.Color.dark_teal(), timestap=datetime.datetime.utcnow(), description=f"Hey! {ctx.message.author} to view list of commands with defination visit the [website](http://www.devhubyt.xyz/Superior/commands.html)")
 	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | myinfo | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
 	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
 	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
-	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")
-	embed.set_footer(text=f"Hey! {ctx.message.author} to view list of commands with defination visit http://www.devhubyt.xyz/Superior/commands.html")               
+	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")               
 	await ctx.send(embed=embed)
+	
+@client.command()
+async def invite(ctx):
+    await ctx.send(f"https://discordapp.com/api/oauth2/authorize?client_id={client.user.id}&permissions=8&scope=bot")
 	
 @client.command()
 @commands.is_owner()
