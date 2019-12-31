@@ -67,7 +67,6 @@ async def help(ctx):
 	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | myinfo | welcomer | invite | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
 	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
-	embed.add_field(name="Search Commands", value="*google | youtube | yahoo*", inline=True)
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
 	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")               
@@ -269,33 +268,4 @@ async def hug(ctx, *, member: discord.Member = None):
 	else:
 		await ctx.send(f"{member.mention} was hugged by {ctx.message.author.mention} 💝")
 		
-@client.command()
-async def google(ctx, *, search = None):
-	if search == None:
-		embed = discord.Embed(titile="Google Serch error", description="Nothing to search", color=discord.Color.blue())
-		await ctx.send(embed=embed)
-	else:
-		embed = discord.Embed(title=f"**{search}**", color=discord.Color.dark_blue(), url=f"https://www.google.com/search?q={search}")
-		embed.set_author(name="Google Search", icon_url="https://cdn.discordapp.com/attachments/600914805619949588/601930101952741377/google-logo-icon-PNG-Transparent-Background-768x768.png")
-		await ctx.send(embed=embed)
-		
-@client.command()
-async def yahoo(ctx, *, search = None):
-	if search == None:
-		embed = discord.Embed(title="Yahoo Search Error", description="Cannot Find anything", color=discord.Color.dark_red())
-		await ctx.send(embed=embed)
-	else:
-		embed = discord.Embed(title=f"**{search}**", color=discord.Color.blurple(), url=f"https://in.search.yahoo.com/search?p={search}")
-		embed.set_author(name="Yahoo Search", icon_url="https://cdn.discordapp.com/attachments/625273073330946058/625281245709991936/58482919cef1014c0b5e49f3.png")
-		await ctx.send(embed=embed)
-		
-@client.command()
-async def youtube(ctx, *, search = None):
-	if search == None:
-		embed = discord.Embed(title="YouTube Search error", description="Nothing to search", color=discord.Color.dark_red())
-		await ctx.send(embed=embed)
-	else:
-		embed = discord.Embed(title=f"**{search}**", color=discord.Color.blurple(), url=f"https://www.youtube.com/results?search_query={search}")
-		await ctx.send(embed=embed)
-
 client.run(token)
