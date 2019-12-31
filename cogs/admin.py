@@ -1,9 +1,28 @@
 import discord
+import asyncio
 from discord.ext import commands
 
 class Admin(commands.Cog):
 	def __init__(self, client):
 		self.client = client
+		
+	async def run_cmd(self, cmd: str) -> str: # add this right under the class
+         process =\
+         await asyncio.create_subprocess_shell(cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+         results = await process.communicate()
+         return "".join(x.decode("utf-8") for x in results)
+         
+	@commands.command(hidden=True)
+	@commands.is_owner() # double protection
+	async def pull(self, ctx):
+		if ctx.author.id == "650890049558282272":
+			shell = await self.run_cmd('git pull Superior --no-commit --no-edit --ff-only master')
+			shell = str(shell)
+			embed = discord.Embed(description=shell)
+			embed.set_author(name="Pulled from Git", icon_url="https://avatars0.githubusercontent.com/u/9919?s=280&v=4")
+			await ctx.send(embed=embed)
+		else:
+			pass
 	
 	@commands.command()
 	@commands.is_owner()
