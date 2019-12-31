@@ -152,7 +152,7 @@ async def guildinfo(ctx):
 	em.add_field(name="Region", value=ctx.guild.region)
 	em.add_field(name="Verification level", value=ctx.guild.verification_level)
 	em.add_field(name="Text Channels:", value=len(ctx.guild.text_channels))
-	em.add_field(name="Voice Channs:", value=len(ctx.guild.voice_channels))
+	em.add_field(name="Voice Channels:", value=len(ctx.guild.voice_channels))
 	em.add_field(name="Features", value=f"`{features}`")
 	em.add_field(name="Server Boost Level", value=ctx.guild.premium_tier)
 	await ctx.send(embed=em)
