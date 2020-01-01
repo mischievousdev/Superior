@@ -89,8 +89,8 @@ async def stats(ctx):
 	
 @client.command()
 async def ping(ctx):
-	msg = f"My latency is {round(client.latency * 1000)}ms"
-	embed = discord.Embed(title="Pong :ping_pong:", description=msg, color=discord.Color.green())
+	msg = f"My latency is `{round(client.latency * 1000)}ms`"
+	embed = discord.Embed(title="Pong!", description=msg, color=discord.Color.green())
 	await ctx.send(embed=embed)
 	
 @client.command()
