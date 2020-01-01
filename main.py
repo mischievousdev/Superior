@@ -57,7 +57,7 @@ async def help(ctx):
 	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | myinfo | invite | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
 	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
-	embed.add_field(name="Info commands", value="*userinfo(alias=ui) [member](member is optional) | serverinfo(salias=si) | emojiinfo | roleinfo | botinfo*")
+	embed.add_field(name="Info commands", value="*userinfo(alias=ui) [member](member is optional) | serverinfo(alias=si) | emojiinfo(alias=ei) | roleinfo(alias=ri) | botinfo(alias=bi)*")
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
 	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")               
