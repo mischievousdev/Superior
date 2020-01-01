@@ -106,6 +106,6 @@ class Info(commands.Cog):
 		embed.add_field(name="Ram Usage", value=f"`{ramUsage:.2f} MB`")
 		embed.add_field(name="CPU Usage", value=f"`{psutil.cpu_percent()}% CPU`")
 		embed.set_footer(text=f"Supeior Bot - v1.0.3 | Thanks {ctx.author.name}! for showing interest to know about me")
-	
+		await ctx.send(embed=embed)
 def setup(client):
 	client.add_cog(Info(client))
