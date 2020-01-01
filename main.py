@@ -66,15 +66,6 @@ async def help(ctx):
 @client.command()
 async def invite(ctx):
     await ctx.send(f"https://discordapp.com/api/oauth2/authorize?client_id={client.user.id}&permissions=8&scope=bot")
-	
-@client.command()
-@commands.is_owner()
-async def logout(ctx):
-	print('Logged Out')
-	async with ctx.typing():
-		await ctx.send("Logged out successfully")
-		await client.logout()
-		print('Done')
 		
 @client.command()
 @commands.is_owner()
