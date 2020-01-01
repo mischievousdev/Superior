@@ -71,7 +71,7 @@ async def invite(ctx):
 @commands.is_owner()
 async def logout(ctx):
 	print('Logged Out')
-	async with ctx.typing()
+	async with ctx.typing():
 		await ctx.send("Logged out successfully")
 		await client.logout()
 		print('Done')
