@@ -57,6 +57,7 @@ async def help(ctx):
 	embed.add_field(name="General Commands", value="*ping | avatar | userinfo | guildinfo | myinfo | invite | welcomer | embed | bitcoin | serverstats | joined | uptime | botinfo*", inline=True)
 	embed.add_field(name="Mathematics Commands", value="*add | subtract | multiply | divide*", inline=True)
 	embed.add_field(name="Fun Commands", value="*meme | slap | mentionme | dice | toss | reverse | meow | hug*", inline=True)
+	embed.add_field(name="Info commands", value="*userinfo(alias=ui) [member](member is optional) | serverinfo(salias=si) | emojiinfo | roleinfo | botinfo*")
 	embed.add_field(name="Action Commands", value="*ban | unban | kick | purge | mute | unmute | softban | nuke*", inline=True)
 	embed.add_field(name="Image Fun Commands", value="*calling | captcha | challenge | achievement | facts | scroll*")
 	embed.add_field(name="Text Fun Commands", value="*greentext | bluetext | echo | reverse | randomnum*")               
@@ -70,7 +71,7 @@ async def invite(ctx):
 @commands.is_owner()
 async def logout(ctx):
 	print('Logged Out')
-	async with ctx.typing():
+	async with ctx.typing()
 		await ctx.send("Logged out successfully")
 		await client.logout()
 		print('Done')
