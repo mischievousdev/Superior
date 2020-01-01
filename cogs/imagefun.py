@@ -9,7 +9,7 @@ class ImageFun(commands.Cog):
 	@commands.command()
 	async def calling(self, ctx, txt: str):
 		embed = discord.Embed(title="calling", color=discord.Color.dark_green())
-		embed.set_image(url=f"https://api.alexflipnote.dev/calling?text=hi")
+		embed.set_image(url=f"https://api.alexflipnote.dev/calling?text={txt}")
 		await ctx.send(embed=embed)
 		
 	@commands.command()
