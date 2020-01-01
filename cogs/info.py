@@ -77,7 +77,7 @@ class Info(commands.Cog):
 		embed.add_field(name="Emoji Created at", value=f'`{emoji.created_at.strftime("%a, %#d %B %Y, %I:%M %p UTC")}`')
 		embed.add_field(name="Animated ?", value=f"`{emoji.animated}`")
 		embed.add_field(name="Available for use ?", value=f"`{emoji.available}`")
-		embed.add_field(name="Guild that belongs to this emoj", value=f"{emoji.guild} `({emoji.guild_id})`")
+		embed.add_field(name="Guild that belongs to this emoji", value=f"{emoji.guild} `({emoji.guild_id})`")
 		await ctx.send(embed=embed)
 		
 	"""@commands.command()
