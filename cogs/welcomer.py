@@ -1,5 +1,6 @@
 from discord.ext import commands
 import discord
+import psutil
 import random
 import datetime
 import sqlite3
