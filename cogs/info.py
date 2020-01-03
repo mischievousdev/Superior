@@ -9,7 +9,7 @@ from discord import Embed
 class Info(commands.Cog):
 	def __init__(self, client):
 		self.client = client
-		self.process = psutil.Process(os.getpgid())
+		self.process = psutil.Process(os.getpid())
 		self.launch_time = datetime.datetime.utcnow()
 		
 	def get_uptime(self, *, brief=False):
