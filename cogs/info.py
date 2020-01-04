@@ -26,7 +26,7 @@ class Info(commands.Cog):
 		else:
 			fmt = '{h}h {m}m {s}s'
 			if days:
-				fmt = '{d}d' + fmt
+				fmt = '{d}d ' + fmt
 				
 		return fmt.format(d=days, h=hours, m=minutes, s=seconds)
 		
