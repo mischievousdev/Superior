@@ -41,7 +41,7 @@ class Info(commands.Cog):
 		await ctx.send(embed=embed)
 		
 	@commands.command(aliases=['ui'])
-	async def testui(self, ctx, *, member: discord.Member=None):
+	async def userinfo(self, ctx, *, member: discord.Member=None):
 		if not member:
 			member = ctx.author
 		
