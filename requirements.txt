@@ -1,5 +1,5 @@
 discord.py==1.2.5
-timeago==1.0.10
+timeago==1.0.13
 pylint==1.8.4
 psutil==5.6.7
 dblpy
