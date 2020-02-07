@@ -8,6 +8,7 @@ from cogs.utils import checks, perms
 import logging
 import random
 import os
+import jishaku
 import typing
 import json
 import datetime
@@ -32,6 +33,7 @@ token = os.getenv("TOKEN")
 for filename in os.listdir('./cogs'):
 	if filename.endswith('.py'):
 		client.load_extension(f"cogs.{filename[:-3]}")
+		client.load_extension("jishaku")
 
 @client.event
 async def on_ready():
